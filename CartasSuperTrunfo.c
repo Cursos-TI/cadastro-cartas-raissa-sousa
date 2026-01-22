@@ -15,7 +15,26 @@ int main() {
     int numPontosTuristicos;
 
   // Área para entrada de dados
-    
+    printf("Digite uma letra de 'A' a 'H'(Estado): \n");
+    scanf("%s", &estado);
+
+    printf("Digite o código da carta: \n");
+    scanf("%s", &codigoCarta);
+
+    printf("Digite o nome da cidade: \n");
+    scanf("%s", &nomeCidade);
+
+    printf("Digite o número da população: \n");
+    scanf("%d", &populacao);
+
+    printf("Digite a área do território da cidade: \n");
+    scanf("%f", &area);
+
+    printf("Digite o PIB da cidade: \n");
+    scanf("%f", &PIB);
+
+    printf("Digite o número de pontos turísticos: \n");
+    scanf("%d", &numPontosTuristicos);
 
   // Área para exibição dos dados da cidade
 
