@@ -13,6 +13,8 @@ struct Carta {
     float area;
     float PIB;
     int numPontosTuristicos;
+    float densidadePop;
+    float pibPerCapita;
 };
 
 int main() {
@@ -45,6 +47,9 @@ int main() {
     printf("Digite o número de pontos turísticos: \n");
     scanf("%d", &carta1.numPontosTuristicos);
 
+    carta1.densidadePop = carta1.populacao / carta1.area;
+    carta1.pibPerCapita = carta1.PIB / carta1.populacao;
+
     // ====== ENTRADA DA SEGUNDA CARTA ======
 
     // Área para entrada de dados
@@ -70,7 +75,10 @@ int main() {
     scanf("%f", &carta2.PIB);
 
     printf("Digite o número de pontos turísticos: \n");
-    scanf("%d", &carta2.numPontosTuristicos);    
+    scanf("%d", &carta2.numPontosTuristicos); 
+    
+    carta2.densidadePop = carta2.populacao / carta2.area;
+    carta2.pibPerCapita = carta2.PIB / carta2.populacao;
 
   // Área para exibição dos dados da cidade
     printf("\n===== CARTA 1 =====\n");
@@ -81,6 +89,8 @@ int main() {
     printf("Área: %.2f Km²\n", carta1.area);
     printf("PIB: %.2f bilhões de reais\n", carta1.PIB);
     printf("Número de pontos turísticos: %d\n", carta1.numPontosTuristicos);
+    printf("Densidade populacional: %.2f hab/km²\n", carta1.densidadePop);
+    printf("PIB per capita: %.2f\n", carta1.pibPerCapita);
 
     printf("\n===== CARTA 2 =====\n");
     printf("Estado: %s\n", carta2.estado);
@@ -90,6 +100,8 @@ int main() {
     printf("Área: %.2f km²\n", carta2.area);
     printf("PIB: %.2f bilhões de reais\n", carta2.PIB);
     printf("Pontos turísticos: %d\n", carta2.numPontosTuristicos);
+    printf("Densidade populacional: %.2f hab/km²\n", carta2.densidadePop);
+    printf("PIB per capita: %.2f\n", carta2.pibPerCapita);
 
 return 0;
 } 
